@@ -35,7 +35,7 @@
             //  Read transaction only
             ReadNCPDPFileTransactionOnly.Run();
 
-            //  Read with custom header
+            //  Read with custom UIB
             ReadNCPDPFileWithCustomUIB.Run();
         }
     }

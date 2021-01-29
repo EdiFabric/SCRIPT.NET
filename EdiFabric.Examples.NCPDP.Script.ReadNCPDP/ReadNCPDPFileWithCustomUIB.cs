@@ -13,7 +13,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
     class ReadNCPDPFileWithCustomUIB
     {
         /// <summary>
-        /// Read with custom header.
+        /// Read with custom UIB.
         /// </summary>
         public static void Run()
         {
