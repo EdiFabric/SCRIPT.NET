@@ -59,6 +59,7 @@
     <Compile Include="ReadNCPDPFileToEnd.cs" />
     <Compile Include="ReadNCPDPFileToEndAsync.cs" />
     <Compile Include="ReadNCPDPFileTransactionOnly.cs" />
+    <Compile Include="ReadNCPDPFileWithCustomUIB.cs" />
     <Compile Include="ReadNCPDPFileWithInheritedTemplate.cs" />
     <Compile Include="ReadNCPDPFileWithTemplateResolution.cs" />
   </ItemGroup>
