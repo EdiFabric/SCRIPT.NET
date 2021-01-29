@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Examples.NCPDP.Script.Demo", "EdiFabric.Examples.NCPDP.Script.Demo\EdiFabric.Examples.NCPDP.Script.Demo.csproj", "{8273FCAA-6E5B-436A-A74A-44CEA33D3A51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Examples.NCPDP.Script.Common", "EdiFabric.Examples.NCPDP.Script.Common\EdiFabric.Examples.NCPDP.Script.Common.csproj", "{8526F8AB-C514-469E-9D16-12A944E1FBD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Getting started", "_Getting started", "{CB9580C2-A62D-4744-A99D-A9D0FFB33901}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples by feature", "Examples by feature", "{EE71C225-80E9-42B3-9617-219608C40891}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample files", "Sample files", "{A7D3331A-75B5-4248-B6B5-EA55B9C6400B}"
+	ProjectSection(SolutionItems) = preProject
+		Files\MixedTransactions.txt = Files\MixedTransactions.txt
+		Files\PharmacyRequest.txt = Files\PharmacyRequest.txt
+		Files\PrescriptionRequest_NEWRX.json = Files\PrescriptionRequest_NEWRX.json
+		Files\PrescriptionRequest_NEWRX.txt = Files\PrescriptionRequest_NEWRX.txt
+		Files\PrescriptionRequest_NEWRX.xml = Files\PrescriptionRequest_NEWRX.xml
+		Files\PrescriptionRequest_NEWRX2.xml = Files\PrescriptionRequest_NEWRX2.xml
+		Files\PrescriptionRequestCorruptHeader.txt = Files\PrescriptionRequestCorruptHeader.txt
+		Files\PrescriptionRequestCorruptUIH.txt = Files\PrescriptionRequestCorruptUIH.txt
+		Files\PrescriptionRequestNoEnvelope_NEWRX.txt = Files\PrescriptionRequestNoEnvelope_NEWRX.txt
+		Files\PrescriptionRequests_NEWRX.txt = Files\PrescriptionRequests_NEWRX.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Examples.NCPDP.Script.JSON", "EdiFabric.Examples.NCPDP.Script.JSON\EdiFabric.Examples.NCPDP.Script.JSON.csproj", "{F83F44E0-D2AD-43E1-BC8D-B207234D5F9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Examples.NCPDP.Script.XML", "EdiFabric.Examples.NCPDP.Script.XML\EdiFabric.Examples.NCPDP.Script.XML.csproj", "{C6649000-F4B2-48E7-85A0-2D73A432AC9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Examples.NCPDP.Script.ReadNCPDP", "EdiFabric.Examples.NCPDP.Script.ReadNCPDP\EdiFabric.Examples.NCPDP.Script.ReadNCPDP.csproj", "{616ADDD9-B1D5-4214-ACEA-F5BD1BD84537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Examples.NCPDP.Script.WriteNCPDP", "EdiFabric.Examples.NCPDP.Script.WriteNCPDP\EdiFabric.Examples.NCPDP.Script.WriteNCPDP.csproj", "{93E9E3EA-751D-4AFD-996E-89124C13898D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Examples.NCPDP.Script.ValidateNCPDP", "EdiFabric.Examples.NCPDP.Script.ValidateNCPDP\EdiFabric.Examples.NCPDP.Script.ValidateNCPDP.csproj", "{63EF599D-430E-4167-8404-8683C8FABFFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8273FCAA-6E5B-436A-A74A-44CEA33D3A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8273FCAA-6E5B-436A-A74A-44CEA33D3A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8273FCAA-6E5B-436A-A74A-44CEA33D3A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8273FCAA-6E5B-436A-A74A-44CEA33D3A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8526F8AB-C514-469E-9D16-12A944E1FBD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8526F8AB-C514-469E-9D16-12A944E1FBD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8526F8AB-C514-469E-9D16-12A944E1FBD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8526F8AB-C514-469E-9D16-12A944E1FBD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83F44E0-D2AD-43E1-BC8D-B207234D5F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83F44E0-D2AD-43E1-BC8D-B207234D5F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83F44E0-D2AD-43E1-BC8D-B207234D5F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83F44E0-D2AD-43E1-BC8D-B207234D5F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6649000-F4B2-48E7-85A0-2D73A432AC9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6649000-F4B2-48E7-85A0-2D73A432AC9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6649000-F4B2-48E7-85A0-2D73A432AC9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6649000-F4B2-48E7-85A0-2D73A432AC9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616ADDD9-B1D5-4214-ACEA-F5BD1BD84537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616ADDD9-B1D5-4214-ACEA-F5BD1BD84537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616ADDD9-B1D5-4214-ACEA-F5BD1BD84537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616ADDD9-B1D5-4214-ACEA-F5BD1BD84537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E9E3EA-751D-4AFD-996E-89124C13898D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E9E3EA-751D-4AFD-996E-89124C13898D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E9E3EA-751D-4AFD-996E-89124C13898D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E9E3EA-751D-4AFD-996E-89124C13898D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63EF599D-430E-4167-8404-8683C8FABFFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63EF599D-430E-4167-8404-8683C8FABFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63EF599D-430E-4167-8404-8683C8FABFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63EF599D-430E-4167-8404-8683C8FABFFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F83F44E0-D2AD-43E1-BC8D-B207234D5F9D} = {EE71C225-80E9-42B3-9617-219608C40891}
+		{C6649000-F4B2-48E7-85A0-2D73A432AC9D} = {EE71C225-80E9-42B3-9617-219608C40891}
+		{616ADDD9-B1D5-4214-ACEA-F5BD1BD84537} = {EE71C225-80E9-42B3-9617-219608C40891}
+		{93E9E3EA-751D-4AFD-996E-89124C13898D} = {EE71C225-80E9-42B3-9617-219608C40891}
+		{63EF599D-430E-4167-8404-8683C8FABFFE} = {EE71C225-80E9-42B3-9617-219608C40891}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10A21700-3E04-49E4-B7FF-B92A5683F39A}
+	EndGlobalSection
+EndGlobal
