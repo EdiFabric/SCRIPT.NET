@@ -53,7 +53,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ValidateNCPDP
     [AttributeUsage(AttributeTargets.Property)]
     public class DRULoopValidationAttribute : ValidationAttribute
     {
-        public DRULoopValidationAttribute() : base(10)
+        public DRULoopValidationAttribute() : base(10, ValidationLevel.InterSegment_SNIP4)
         {
         }
 
