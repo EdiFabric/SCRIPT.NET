@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.WriteNCPDP\Program.cs" Link="Program.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.WriteNCPDP\WriteNCPDPBatch.cs" Link="WriteNCPDPBatch.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.WriteNCPDP\WriteNCPDPToFile.cs" Link="WriteNCPDPToFile.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.WriteNCPDP\WriteNCPDPToStream.cs" Link="WriteNCPDPToStream.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.WriteNCPDP\WriteNCPDPToStreamAsync.cs" Link="WriteNCPDPToStreamAsync.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.WriteNCPDP\WriteNCPDPTransactionOnly.cs" Link="WriteNCPDPTransactionOnly.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.WriteNCPDP\WriteNCPDPWithCustomDelimiters.cs" Link="WriteNCPDPWithCustomDelimiters.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.WriteNCPDP\WriteNCPDPWithEmptyDataElements.cs" Link="WriteNCPDPWithEmptyDataElements.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.WriteNCPDP\WriteNCPDPWithNewLines.cs" Link="WriteNCPDPWithNewLines.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.WriteNCPDP\WriteNCPDPWithoutAutoTrailers.cs" Link="WriteNCPDPWithoutAutoTrailers.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EdiFabric.Examples.NCPDP.Script.Common\EdiFabric.Examples.NCPDP.Script.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EdiFabric">
+      <HintPath>..\..\..\edifabric\net6.0\EdiFabric.dll</HintPath>
+    </Reference>
+    <Reference Include="EdiFabric.Templates.Ncpdp">
+      <HintPath>..\..\..\edifabric\net6.0\EdiFabric.Templates.Ncpdp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

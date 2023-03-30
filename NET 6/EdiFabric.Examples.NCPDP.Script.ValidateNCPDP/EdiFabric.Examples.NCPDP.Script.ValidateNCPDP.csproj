@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ValidateNCPDP\Program.cs" Link="Program.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ValidateNCPDP\ValidateCustomNCPDPCodes.cs" Link="ValidateCustomNCPDPCodes.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ValidateNCPDP\ValidateDataElementTypes.cs" Link="ValidateDataElementTypes.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ValidateNCPDP\ValidateEDITransationsBeforeWrite.cs" Link="ValidateEDITransationsBeforeWrite.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ValidateNCPDP\ValidateNCPDPTransations.cs" Link="ValidateNCPDPTransations.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ValidateNCPDP\ValidateNCPDPTransationsAsync.cs" Link="ValidateNCPDPTransationsAsync.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ValidateNCPDP\ValidateNCPDPTransationsWithCustomCode.cs" Link="ValidateNCPDPTransationsWithCustomCode.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ValidateNCPDP\ValidateUIB.cs" Link="ValidateUIB.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EdiFabric.Examples.NCPDP.Script.Common\EdiFabric.Examples.NCPDP.Script.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EdiFabric">
+      <HintPath>..\..\..\edifabric\net6.0\EdiFabric.dll</HintPath>
+    </Reference>
+    <Reference Include="EdiFabric.Templates.Ncpdp">
+      <HintPath>..\..\..\edifabric\net6.0\EdiFabric.Templates.Ncpdp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

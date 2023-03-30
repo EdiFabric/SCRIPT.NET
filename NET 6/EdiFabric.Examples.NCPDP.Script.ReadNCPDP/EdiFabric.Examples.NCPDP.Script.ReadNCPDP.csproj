@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\Program.cs" Link="Program.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileBatch.cs" Link="ReadNCPDPFileBatch.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileCorrupt.cs" Link="ReadNCPDPFileCorrupt.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileSplitting.cs" Link="ReadNCPDPFileSplitting.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileStreaming.cs" Link="ReadNCPDPFileStreaming.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileStreamingAsync.cs" Link="ReadNCPDPFileStreamingAsync.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileToEnd.cs" Link="ReadNCPDPFileToEnd.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileToEndAsync.cs" Link="ReadNCPDPFileToEndAsync.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileTransactionOnly.cs" Link="ReadNCPDPFileTransactionOnly.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileWithCustomUIB.cs" Link="ReadNCPDPFileWithCustomUIB.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileWithInheritedTemplate.cs" Link="ReadNCPDPFileWithInheritedTemplate.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.ReadNCPDP\ReadNCPDPFileWithTemplateResolution.cs" Link="ReadNCPDPFileWithTemplateResolution.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EdiFabric.Examples.NCPDP.Script.Common\EdiFabric.Examples.NCPDP.Script.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EdiFabric">
+      <HintPath>..\..\..\edifabric\net6.0\EdiFabric.dll</HintPath>
+    </Reference>
+    <Reference Include="EdiFabric.Templates.Ncpdp">
+      <HintPath>..\..\..\edifabric\net6.0\EdiFabric.Templates.Ncpdp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
