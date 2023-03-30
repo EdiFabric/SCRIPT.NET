@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8273FCAA-6E5B-436A-A74A-44CEA33D3A51}</ProjectGuid>
+    <ProjectGuid>{93E9E3EA-751D-4AFD-996E-89124C13898D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>EdiFabric.Examples.NCPDP.Script.Demo</RootNamespace>
-    <AssemblyName>EdiFabric.Examples.NCPDP.Script.Demo</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>EdiFabric.Examples.NCPDP.Script.WriteNCPDP</RootNamespace>
+    <AssemblyName>EdiFabric.Examples.NCPDP.Script.WriteNCPDP</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,12 +34,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EdiFabric, Version=10.4.3.0, Culture=neutral, PublicKeyToken=30198c5f4974e51a, processorArchitecture=MSIL">
-      <HintPath>..\..\edifabric-trial\net45\EdiFabric.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\edifabric\net48\EdiFabric.dll</HintPath>
     </Reference>
     <Reference Include="EdiFabric.Templates.Ncpdp, Version=2.6.7.0, Culture=neutral, PublicKeyToken=30198c5f4974e51a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\edifabric-trial\net45\EdiFabric.Templates.Ncpdp.dll</HintPath>
+      <HintPath>..\..\..\edifabric\net48\EdiFabric.Templates.Ncpdp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,6 +53,15 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WriteNCPDPTransactionOnly.cs" />
+    <Compile Include="WriteNCPDPWithCustomDelimiters.cs" />
+    <Compile Include="WriteNCPDPWithEmptyDataElements.cs" />
+    <Compile Include="WriteNCPDPWithNewLines.cs" />
+    <Compile Include="WriteNCPDPWithoutAutoTrailers.cs" />
+    <Compile Include="WriteNCPDPBatch.cs" />
+    <Compile Include="WriteNCPDPToFile.cs" />
+    <Compile Include="WriteNCPDPToStream.cs" />
+    <Compile Include="WriteNCPDPToStreamAsync.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

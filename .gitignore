@@ -2,20 +2,20 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/EdiFabric.Examples.NCPDP.Script.Common/bin/Debug
-/EdiFabric.Examples.NCPDP.Script.Common/obj/Debug
-/EdiFabric.Examples.NCPDP.Script.Demo/bin/Debug
-/EdiFabric.Examples.NCPDP.Script.Demo/obj/Debug
-/EdiFabric.Examples.NCPDP.Script.JSON/bin/Debug
-/EdiFabric.Examples.NCPDP.Script.JSON/obj/Debug
-/EdiFabric.Examples.NCPDP.Script.ReadNCPDP/bin/Debug
-/EdiFabric.Examples.NCPDP.Script.ReadNCPDP/obj/Debug
-/EdiFabric.Examples.NCPDP.Script.ValidateNCPDP/bin/Debug
-/EdiFabric.Examples.NCPDP.Script.ValidateNCPDP/obj/Debug
-/EdiFabric.Examples.NCPDP.Script.WriteNCPDP/bin/Debug
-/EdiFabric.Examples.NCPDP.Script.WriteNCPDP/obj/Debug
-/EdiFabric.Examples.NCPDP.Script.XML/bin/Debug
-/EdiFabric.Examples.NCPDP.Script.XML/obj/Debug
-/packages
-/.vs/EdiFabric.Examples.NCPDP.Script/v16/.suo
-/.vs/EdiFabric.Examples.NCPDP.Script/v16/TestStore/0
+/.vs/EdiFabric.Examples.NCPDP.Script/v16
+/NET Framework 4.8/.vs/EdiFabric.Examples.NCPDP.Script
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.Common/bin
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.Common/obj
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.Demo/bin
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.Demo/obj
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.JSON/bin
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.JSON/obj
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.ReadNCPDP/bin
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.ReadNCPDP/obj
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.ValidateNCPDP/bin
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.ValidateNCPDP/obj
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.WriteNCPDP/bin
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.WriteNCPDP/obj
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.XML/bin
+/NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.XML/obj
+/NET Framework 4.8/packages/Newtonsoft.Json.12.0.3
