@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using EdiFabric.Core.Model.Edi.Ncpdp;
+using EdiFabric.Examples.NCPDP.Script.Common;
 using EdiFabric.Framework.Readers;
 
 namespace EdiFabric.Examples.NCPDP.Script.ValidateNCPDP
@@ -17,7 +18,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ValidateNCPDP
             Debug.WriteLine(MethodBase.GetCurrentMethod().Name);
             Debug.WriteLine("******************************");
 
-            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PrescriptionRequest_NEWRX.txt");
+            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX.txt");
 
             using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp"))
             {

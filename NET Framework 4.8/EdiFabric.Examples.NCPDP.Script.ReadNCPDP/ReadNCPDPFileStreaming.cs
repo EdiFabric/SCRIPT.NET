@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using EdiFabric.Core.Model.Edi.Ncpdp;
+using EdiFabric.Examples.NCPDP.Script.Common;
 using EdiFabric.Framework.Readers;
 using EdiFabric.Templates.Script106;
 
@@ -19,7 +20,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             Debug.WriteLine("******************************");
 
             //  1.  Load to a stream 
-            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PrescriptionRequests_NEWRX.txt");
+            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequests_NEWRX.txt");
 
             //  2.  Read multiple transactions batched up in the same interchange
             using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp"))

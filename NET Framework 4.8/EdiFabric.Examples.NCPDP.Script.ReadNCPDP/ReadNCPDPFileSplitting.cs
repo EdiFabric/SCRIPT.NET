@@ -8,6 +8,7 @@ using EdiFabric.Core.Annotations.Edi;
 using EdiFabric.Core.Annotations.Validation;
 using EdiFabric.Core.Model.Edi;
 using EdiFabric.Core.Model.Edi.Ncpdp;
+using EdiFabric.Examples.NCPDP.Script.Common;
 using EdiFabric.Framework.Readers;
 using EdiFabric.Templates.Script106;
 
@@ -24,7 +25,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             Debug.WriteLine(MethodBase.GetCurrentMethod().Name);
             Debug.WriteLine("******************************");
 
-            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PharmacyRequest.txt");
+            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PharmacyRequest.txt");
 
             //  The split is driven by setting which class to split by in the template.
             //  Set the class to inherit from EdiItem and the parser will automatically split by it.
@@ -62,7 +63,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             Debug.WriteLine(MethodBase.GetCurrentMethod().Name);
             Debug.WriteLine("******************************");
 
-            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PharmacyRequest.txt");
+            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PharmacyRequest.txt");
 
             //  The split is driven by setting which class to split by in the template.
             //  Set the class to inherit from EdiItem and the parser will automatically split by it.

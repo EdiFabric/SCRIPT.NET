@@ -8,6 +8,7 @@ using System.Runtime.Serialization;
 using EdiFabric.Core.Annotations.Edi;
 using EdiFabric.Core.Model.Edi;
 using EdiFabric.Core.Model.Edi.ErrorContexts;
+using EdiFabric.Examples.NCPDP.Script.Common;
 using EdiFabric.Framework.Readers;
 using EdiFabric.Templates.Script106;
 
@@ -28,7 +29,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ValidateNCPDP
             Dictionary<Type, Type> codeSetMap = new Dictionary<Type, Type>();
             codeSetMap.Add(typeof(NCPDP_ID_4705), typeof(NCPDP_ID_4705PartnerA));
 
-            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PrescriptionRequest_NEWRX.txt");
+            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX.txt");
 
             List<IEdiItem> ncpdpItems;
             using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp"))
@@ -65,7 +66,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ValidateNCPDP
             var codeSetMap = new Dictionary<string, List<string>>();
             codeSetMap.Add("NCPDP_ID_4705", new List<string> { "AD", "AS", "PARTNERACODE" });
 
-            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PrescriptionRequest_NEWRX.txt");
+            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX.txt");
 
             List<IEdiItem> ncpdpItems;
             using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp"))

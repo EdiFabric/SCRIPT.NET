@@ -16,7 +16,7 @@ namespace EdiFabric.Examples.NCPDP.Script.JSON
             Debug.WriteLine(MethodBase.GetCurrentMethod().Name);
             Debug.WriteLine("******************************");
 
-            var ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PrescriptionRequest_NEWRX.json");
+            var ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX.json");
             var transaction = Newtonsoft.Json.JsonConvert.DeserializeObject<TSNEWRX>(ncpdpStream.LoadToString());
         }
     }

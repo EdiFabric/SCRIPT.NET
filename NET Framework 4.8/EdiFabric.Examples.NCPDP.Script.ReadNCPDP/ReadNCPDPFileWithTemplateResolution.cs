@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using EdiFabric.Core.Model.Edi;
 using EdiFabric.Core.Model.Edi.Ncpdp;
+using EdiFabric.Examples.NCPDP.Script.Common;
 using EdiFabric.Framework;
 using EdiFabric.Framework.Readers;
 using EdiFabric.Templates.Script106;
@@ -23,7 +24,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             Debug.WriteLine(MethodBase.GetCurrentMethod().Name);
             Debug.WriteLine("******************************");
 
-            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PrescriptionRequest_NEWRX.txt");
+            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX.txt");
 
             List<IEdiItem> ncpdpItems;
             using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, AssemblyFactory))
@@ -49,7 +50,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             Debug.WriteLine(MethodBase.GetCurrentMethod().Name);
             Debug.WriteLine("******************************");
 
-            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PrescriptionRequest_NEWRX.txt");
+            Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX.txt");
 
             List<IEdiItem> ncpdpItems;
             using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, TypeFactory))

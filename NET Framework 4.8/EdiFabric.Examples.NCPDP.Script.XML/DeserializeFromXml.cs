@@ -18,7 +18,7 @@ namespace EdiFabric.Examples.NCPDP.Script.XML
             Debug.WriteLine(MethodBase.GetCurrentMethod().Name);
             Debug.WriteLine("******************************");
 
-            var ediStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PrescriptionRequest_NEWRX.xml");
+            var ediStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX.xml");
 
             var xml = XElement.Load(ediStream);
             var transaction = xml.Deserialize<TSNEWRX>();
@@ -33,7 +33,7 @@ namespace EdiFabric.Examples.NCPDP.Script.XML
             Debug.WriteLine(MethodBase.GetCurrentMethod().Name);
             Debug.WriteLine("******************************");
 
-            var ediStream = File.OpenRead(Directory.GetCurrentDirectory() + @"\..\..\..\Files\PrescriptionRequest_NEWRX2.xml");
+            var ediStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX2.xml");
 
             var xml = XElement.Load(ediStream);
             var transaction = xml.DeserializeDataContract<TSNEWRX>();
