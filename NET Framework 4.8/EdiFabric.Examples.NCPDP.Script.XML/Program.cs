@@ -1,10 +1,12 @@
-﻿namespace EdiFabric.Examples.NCPDP.Script.XML
+﻿using EdiFabric.Examples.NCPDP.Script.Common;
+
+namespace EdiFabric.Examples.NCPDP.Script.XML
 {
     class Program
     {
         static void Main(string[] args)
         {
-            SerialKey.Set(Common.SerialKey.Get());
+            TokenFileCache.Set();
 
             //  Serialize to XML
             SerializeToXml.WithXmlSerializer();

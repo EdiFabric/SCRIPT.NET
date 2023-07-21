@@ -1,10 +1,12 @@
-﻿namespace EdiFabric.Examples.NCPDP.Script.JSON
+﻿using EdiFabric.Examples.NCPDP.Script.Common;
+
+namespace EdiFabric.Examples.NCPDP.Script.JSON
 {
     class Program
     {
         static void Main(string[] args)
         {
-            SerialKey.Set(Common.SerialKey.Get());
+            TokenFileCache.Set();
 
             //  Serialize to JSON
             SerializeToJson.Run();

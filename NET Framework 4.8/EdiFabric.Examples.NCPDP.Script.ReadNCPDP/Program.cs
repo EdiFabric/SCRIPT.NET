@@ -1,10 +1,12 @@
-﻿namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
+﻿using EdiFabric.Examples.NCPDP.Script.Common;
+
+namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            SerialKey.Set(Common.SerialKey.Get());
+            TokenFileCache.Set();
 
             //  Read NCPDP file to the end
             ReadNCPDPFileToEnd.Run();

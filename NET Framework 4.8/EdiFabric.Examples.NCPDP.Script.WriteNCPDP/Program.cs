@@ -1,10 +1,12 @@
-﻿namespace EdiFabric.Examples.NCPDP.Script.WriteNCPDP
+﻿using EdiFabric.Examples.NCPDP.Script.Common;
+
+namespace EdiFabric.Examples.NCPDP.Script.WriteNCPDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            SerialKey.Set(Common.SerialKey.Get());
+            TokenFileCache.Set();
 
             //  Write NCPDP to stream and then to string or file
             WriteNCPDPToStream.Run();

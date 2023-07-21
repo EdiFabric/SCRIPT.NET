@@ -1,10 +1,12 @@
-﻿namespace EdiFabric.Examples.NCPDP.Script.ValidateNCPDP
+﻿using EdiFabric.Examples.NCPDP.Script.Common;
+
+namespace EdiFabric.Examples.NCPDP.Script.ValidateNCPDP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            SerialKey.Set(Common.SerialKey.Get());
+            TokenFileCache.Set();
 
             //  Validate custom NCPDP codes
             ValidateCustomNCPDPCodes.Run();
