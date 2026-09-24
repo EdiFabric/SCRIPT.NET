@@ -1,16 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33122.133
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12217.157 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Examples.NCPDP.Script.Demo", "EdiFabric.Examples.NCPDP.Script.Demo\EdiFabric.Examples.NCPDP.Script.Demo.csproj", "{8273FCAA-6E5B-436A-A74A-44CEA33D3A51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Examples.NCPDP.Script.Common", "EdiFabric.Examples.NCPDP.Script.Common\EdiFabric.Examples.NCPDP.Script.Common.csproj", "{8526F8AB-C514-469E-9D16-12A944E1FBD5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Getting started", "_Getting started", "{CB9580C2-A62D-4744-A99D-A9D0FFB33901}"
-	ProjectSection(SolutionItems) = preProject
-		..\README.txt = ..\README.txt
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples by feature", "Examples by feature", "{EE71C225-80E9-42B3-9617-219608C40891}"
 EndProject

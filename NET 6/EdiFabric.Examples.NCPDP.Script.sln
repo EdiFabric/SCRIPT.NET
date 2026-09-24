@@ -1,13 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33122.133
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12217.157 stable
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Getting started", "_Getting started", "{A036D57E-880E-4740-97B0-7E649C23820D}"
-	ProjectSection(SolutionItems) = preProject
-		..\README.txt = ..\README.txt
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples by feature", "Examples by feature", "{3F27D2B3-3E38-47D3-860D-1CF167CE967F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample files", "Sample files", "{BD79A19F-2074-4AAE-8A3F-5EB1E53D556D}"
