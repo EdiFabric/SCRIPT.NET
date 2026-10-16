@@ -24,7 +24,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequestNoEnvelope_NEWRX.txt");
 
             List<IEdiItem> ncpdpItems;
-            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp", new NcpdpScriptReaderSettings { NoEnvelope = true }))
+            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Examples.NCPDP.Script.Common", new NcpdpScriptReaderSettings { NoEnvelope = true }))
                 ncpdpItems = ncpdpReader.ReadToEnd().ToList();
 
             var prescriptionRequests = ncpdpItems.OfType<TSNEWRX>();

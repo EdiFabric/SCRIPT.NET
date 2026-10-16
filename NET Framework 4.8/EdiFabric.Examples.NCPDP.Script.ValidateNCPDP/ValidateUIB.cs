@@ -20,7 +20,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ValidateNCPDP
 
             Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX.txt");
 
-            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp"))
+            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Examples.NCPDP.Script.Common"))
             {
                 while (ncpdpReader.Read())
                 {

@@ -23,7 +23,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\MixedTransactions.txt");
 
             //  2.  Read multiple transactions batched up in the same interchange
-            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp"))
+            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Examples.NCPDP.Script.Common"))
             {
                 while (ncpdpReader.Read())
                 {

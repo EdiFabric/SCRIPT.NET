@@ -8,6 +8,12 @@
 
   <ItemGroup>
     <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.Common\Config.cs" Link="Config.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.Common\EF_SCRIPT_106_CHGRES.cs" Link="EF_SCRIPT_106_CHGRES.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.Common\EF_SCRIPT_106_Codes.cs" Link="EF_SCRIPT_106_Codes.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.Common\EF_SCRIPT_106_ComplexElements.cs" Link="EF_SCRIPT_106_ComplexElements.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.Common\EF_SCRIPT_106_NEWRX.cs" Link="EF_SCRIPT_106_NEWRX.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.Common\EF_SCRIPT_106_REFREQ.cs" Link="EF_SCRIPT_106_REFREQ.cs" />
+    <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.Common\EF_SCRIPT_106_Segments.cs" Link="EF_SCRIPT_106_Segments.cs" />
     <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.Common\SegmentBuilders.cs" Link="SegmentBuilders.cs" />
     <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.Common\StreamExtensions.cs" Link="StreamExtensions.cs" />
     <Compile Include="..\..\NET Framework 4.8\EdiFabric.Examples.NCPDP.Script.Common\TokenFileCache.cs" Link="TokenFileCache.cs" />
@@ -16,7 +22,6 @@
 
   <ItemGroup>
     <PackageReference Include="EdiFabric" Version="11.0.0" />
-    <PackageReference Include="EdiFabric.Templates.Ncpdp" Version="3.0.0" />
   </ItemGroup>
 
 </Project>

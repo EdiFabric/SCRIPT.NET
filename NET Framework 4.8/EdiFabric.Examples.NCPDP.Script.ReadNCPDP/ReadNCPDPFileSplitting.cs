@@ -30,7 +30,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             //  The split is driven by setting which class to split by in the template.
             //  Set the class to inherit from EdiItem and the parser will automatically split by it.
             List<IEdiItem> ncpdpItems;
-            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp"))
+            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Examples.NCPDP.Script.Common"))
                 ncpdpItems = ncpdpReader.ReadToEnd().ToList();
 
             var pharmacyRequests = ncpdpItems.OfType<TSREFREQ>();

@@ -26,7 +26,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX.txt");
 
             List<IEdiItem> ncpdpItems;
-            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp"))
+            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Examples.NCPDP.Script.Common"))
             {
                 var items = await ncpdpReader.ReadToEndAsync();
                 ncpdpItems = items.ToList();

@@ -25,7 +25,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequestCorruptHeader.txt");
 
             List<IEdiItem> ncpdpItems;
-            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp"))
+            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Examples.NCPDP.Script.Common"))
                 ncpdpItems = ncpdpReader.ReadToEnd().ToList();
 
             var readerErrors = ncpdpItems.OfType<ReaderErrorContext>();
@@ -54,7 +54,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
             Stream ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequestCorruptUIH.txt");
 
             List<IEdiItem> ncpdpItems;
-            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp", new NcpdpScriptReaderSettings() { ContinueOnError = true }))
+            using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Examples.NCPDP.Script.Common", new NcpdpScriptReaderSettings() { ContinueOnError = true }))
                 ncpdpItems = ncpdpReader.ReadToEnd().ToList();
 
             var readerErrors = ncpdpItems.OfType<ReaderErrorContext>();

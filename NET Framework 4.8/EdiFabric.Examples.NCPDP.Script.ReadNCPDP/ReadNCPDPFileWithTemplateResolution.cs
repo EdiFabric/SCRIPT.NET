@@ -36,7 +36,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
         public static Assembly AssemblyFactory(MessageContext messageContext)
         {
             if (messageContext.Version == "010006")
-                return Assembly.Load("EdiFabric.Templates.Ncpdp");
+                return Assembly.Load("EdiFabric.Examples.NCPDP.Script.Common");
 
             throw new Exception(string.Format("Version {0} is not supported.", messageContext.Version));
         }

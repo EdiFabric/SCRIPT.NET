@@ -1,8 +1,10 @@
-﻿using System.Diagnostics;
+﻿using EdiFabric.Examples.NCPDP.Script.Common;
+using EdiFabric.Templates.Script106;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using EdiFabric.Examples.NCPDP.Script.Common;
-using EdiFabric.Templates.Script106;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text.Json;
 namespace EdiFabric.Examples.NCPDP.Script.JSON
 {
     class DeserializeFromJson
@@ -17,7 +19,7 @@ namespace EdiFabric.Examples.NCPDP.Script.JSON
             Debug.WriteLine("******************************");
 
             var ncpdpStream = File.OpenRead(Directory.GetCurrentDirectory() + Config.TestFilesPath + @"\PrescriptionRequest_NEWRX.json");
-            var transaction = Newtonsoft.Json.JsonConvert.DeserializeObject<TSNEWRX>(ncpdpStream.LoadToString());
+            var transaction = JsonSerializer.Deserialize<TSNEWRX>(ncpdpStream.LoadToString());
         }
     }
 }

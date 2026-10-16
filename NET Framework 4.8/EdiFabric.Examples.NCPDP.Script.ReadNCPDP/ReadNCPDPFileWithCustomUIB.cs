@@ -26,7 +26,7 @@ namespace EdiFabric.Examples.NCPDP.Script.ReadNCPDP
 
             //  Use the base NcpdpScriptReaderBase instead of NcpdpScriptReader
             List<IEdiItem> ncpdpItems;
-            using (var ncpdpReader = new NcpdpScriptReaderBase<UIBCustom, UIG>(ncpdpStream, "EdiFabric.Templates.Ncpdp"))
+            using (var ncpdpReader = new NcpdpScriptReaderBase<UIBCustom, UIG>(ncpdpStream, "EdiFabric.Examples.NCPDP.Script.Common"))
                 ncpdpItems = ncpdpReader.ReadToEnd().ToList();
 
             var customHeaders = ncpdpItems.OfType<UIBCustom>();
