@@ -4,15 +4,22 @@
 
 EdiFabric does not include communication components (AS2 or SFTP), a dashboard, or a UI. It is a library you call from your own application.
 
-The .NET 6 projects compile the same sources as the .NET Framework 4.8 projects. Both solutions reference [EdiFabric 11.0.0](https://www.nuget.org/packages/EdiFabric) and the template packages from NuGet. The examples target .NET 6 for backward compatibility. EdiFabric 11.0.0 also ships targets for .NET 8, .NET 9, and .NET 10. To evaluate one of those, change `TargetFramework` in the project file and rebuild.
+The .NET 6 projects compile the same sources as the .NET Framework 4.8 projects. Both solutions reference [EdiFabric 11.0.0](https://www.nuget.org/packages/EdiFabric) from NuGet. The examples target .NET 6 for backward compatibility. EdiFabric 11.0.0 also ships targets for .NET 8, .NET 9, and .NET 10. To evaluate one of those, change `TargetFramework` in the project file and rebuild.
 
 | Path | Purpose |
 | --- | --- |
 | `NET 6/EdiFabric.Examples.NCPDP.Script.sln` | .NET 6 solution |
 | `NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.sln` | .NET Framework 4.8 solution |
 | `NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.Common/Config.cs` | Serial key shared by every example |
+| `NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.Common/EF_SCRIPT_106_*.cs` | C# templates used by the examples |
 | `NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.Demo/Program.cs` | Runnable walkthrough: read, then validate |
 | `Files/` | Sample NCPDP SCRIPT messages |
+
+### Templates
+
+EdiFabric reads and writes NCPDP SCRIPT through templates: C# classes that describe each message, its groups, segments, data elements and codes. The examples keep their templates as C# files in the **EdiFabric.Examples.NCPDP.Script.Common** class library: one file per SCRIPT 10.6 message (NEWRX, REFREQ and CHGRES), plus the shared segments, composites and codes. The examples reference that project and pass its assembly name to `NcpdpScriptReader`. This is how you use templates in your own application: download the C# files, add them to a class library, and reference it. See [EDI templates](#edi-templates).
+
+`EdiFabric.Examples.NCPDP.Script.Demo` uses a complete, precompiled NCPDP SCRIPT template set, so you can try it with a wider range of message types.
 
 ## Requirements
 
@@ -20,14 +27,16 @@ The .NET 6 projects compile the same sources as the .NET Framework 4.8 projects.
 - .NET 6 for `NET 6/EdiFabric.Examples.NCPDP.Script.sln`. The projects set `<TargetFramework>net6.0</TargetFramework>` so they stay compatible with existing .NET 6 apps. EdiFabric 11.0.0 also provides `net8.0`, `net9.0`, and `net10.0`. To evaluate a later version, change that property (for example to `net8.0`) and rebuild.
 - .NET Framework 4.8 for `NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.sln`.
 
-1. [Sign up free for **Community**](https://www.edifabric.com/pricing.html) to get an evaluation serial key. Community never expires, requires no credit card, and is for non-production use. The first 14 days after you subscribe have unlimited operations, then the quota is 250 per day. To extend the unlimited period, ask through the [support portal](https://support.edifabric.com/hc/en-us/requests/new) or at [support@edifabric.com](mailto:support@edifabric.com). After signup, retrieve your serial from [Your Account](https://www.edifabric.com/docs/getting-started/your-account.html).
-2. Paste that serial into `TrialSerialKey` in `NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.Common/Config.cs`. The .NET 6 projects link this file, so one edit covers both solutions.
+All projects can be evaluated with the demo serial key `bd96a836feca45cb91c86ee65d281f52` without creating an account. It is already set in `TrialSerialKey` in `NET Framework 4.8/EdiFabric.Examples.NCPDP.Script.Common/Config.cs`. This provisional key has a limited quota. Once it runs out, you need an account and a Community subscription to continue the evaluation:
 
-NuGet restore pulls **EdiFabric 11.0.0** and **EdiFabric.Templates.Ncpdp 3.0.0**.
+1. [Sign up free for **Community**](https://www.edifabric.com/pricing.html) to get your own evaluation serial key. Community never expires, requires no credit card, and is for non-production use. The first 14 days after you subscribe have unlimited operations, then the quota is 250 per day. To extend the unlimited period, ask through the [support portal](https://support.edifabric.com/hc/en-us/requests/new) or at [support@edifabric.com](mailto:support@edifabric.com). After signup, retrieve your serial from [Your Account](https://www.edifabric.com/docs/getting-started/your-account.html).
+2. Replace the demo key in `TrialSerialKey` with your serial. The .NET 6 projects link this file, so one edit covers both solutions.
+
+NuGet restore pulls **EdiFabric 11.0.0**.
 
 ## Getting started
 
-**Sign up free for Community** at [edifabric.com/pricing](https://www.edifabric.com/pricing.html) and put your serial in `Config.TrialSerialKey`. Then open a solution, set **EdiFabric.Examples.NCPDP.Script.Demo** as the startup project, and run it.
+The demo serial key in `Config.TrialSerialKey` works without an account. When its quota runs out, **sign up free for Community** at [edifabric.com/pricing](https://www.edifabric.com/pricing.html) and put your own serial there. Open a solution, set **EdiFabric.Examples.NCPDP.Script.Demo** as the startup project, and run it.
 
 From the command line:
 
@@ -54,13 +63,13 @@ License.SetSerial(serial);   // from your Community or paid plan
 var ncpdpStream = File.OpenRead(@"Files\PrescriptionRequest_NEWRX.txt");
 
 List<IEdiItem> ncpdpItems;
-using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Templates.Ncpdp"))
+using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "EdiFabric.Examples.NCPDP.Script.Common"))
     ncpdpItems = ncpdpReader.ReadToEnd().ToList();
 
 var prescriptionRequests = ncpdpItems.OfType<TSNEWRX>();
 ```
 
-`NcpdpScriptReader` takes the stream and the template assembly name. `ReadToEnd` loads the file into memory. For large files, use the streaming samples in **ReadNCPDP**.
+`NcpdpScriptReader` takes the stream and the name of the assembly that contains the templates, here `EdiFabric.Examples.NCPDP.Script.Common`. `ReadToEnd` loads the file into memory. For large files, use the streaming samples in **ReadNCPDP**.
 
 ### Validation
 
@@ -111,8 +120,12 @@ For another message, download its C# template from the EDI spec library. See [ED
 ## Licensing
 
 > [!NOTE]
+> All projects can be evaluated with the demo serial key `bd96a836feca45cb91c86ee65d281f52`
+> without creating an account. Once the limited quota for this provisional key runs out,
+> an account and a Community subscription are required to continue the evaluation.
+>
 > Sign up free for the [Community plan](https://www.edifabric.com/pricing.html)
-> to get an evaluation serial key. Community never expires, requires no credit
+> to get your own evaluation serial key. Community never expires, requires no credit
 > card, and is for non-production evaluation, learning, and prototyping
 > (unlimited operations for the first 14 days after you subscribe, then 250 per day;
 > to extend the unlimited period, ask through the [support portal](https://support.edifabric.com/hc/en-us/requests/new)
@@ -188,7 +201,7 @@ License failures throw `LicenseException`. `ErrorCode` is the number below, and 
 
 ## EDI templates
 
-These examples reference **EdiFabric.Templates.Ncpdp** from NuGet, so they run without any setup. In your own application, use the C# templates from the [EDI spec library](https://www.edifabric.com/specs/index.html). The templates are the same on every plan, Community included. When you upgrade, you change only the serial key, and your template projects stay as they are.
+The examples reference the **EdiFabric.Examples.NCPDP.Script.Common** project, which contains the C# templates for every message they use. In your own application, use the C# templates from the [EDI spec library](https://www.edifabric.com/specs/index.html) the same way. The templates are the same on every plan, Community included. When you upgrade, you change only the serial key, and your template projects stay as they are.
 
 ### Find and download a template
 
@@ -208,7 +221,7 @@ Put one version, or one trading partner, in one class library.
 1. Add a class library to the solution and install EdiFabric into it with `dotnet add package EdiFabric`.
 2. On .NET Framework only, reference `System.Runtime.Serialization` and `System.Xml.Serialization`.
 3. Unzip the downloads. Add the message file, for example `EF_SCRIPT_106_NEWRX.cs`, and every file in the Common folder of the version.
-4. Reference the class library from your application, and pass its assembly name to the reader instead of `EdiFabric.Templates.Ncpdp`. If the project is `ClassLibrary1`:
+4. Reference the class library from your application, and pass its assembly name to the reader, as the examples do with `EdiFabric.Examples.NCPDP.Script.Common`. If the project is `ClassLibrary1`:
 
 ```csharp
 using (var ncpdpReader = new NcpdpScriptReader(ncpdpStream, "ClassLibrary1"))
