@@ -7,7 +7,7 @@ namespace EdiFabric.Examples.NCPDP.Script.WriteNCPDP
     {
         static void Main(string[] args)
         {
-            License.SetSerial(Config.TrialSerialKey);
+            License.EnsureToken(Config.TrialSerialKey, 3600);
 
             //  Write NCPDP to stream and then to string or file
             WriteNCPDPToStream.Run();
