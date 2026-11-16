@@ -1,5 +1,7 @@
 # EdiFabric C# .NET Examples for NCPDP SCRIPT
 
+C# examples for EdiFabric, the .NET NCPDP parser and EDI library: read, write and validate **NCPDP SCRIPT 10.6** e-prescribing messages such as NEWRX, and convert them to JSON. Install EdiFabric from NuGet with `dotnet add package EdiFabric`; it targets .NET 6, 8, 9, 10 and .NET Framework 4.8, and runs without an account on the demo serial key.
+
 **EdiFabric 11.2.0** is a .NET SDK that parses, generates, validates, and splits EDI files. These examples cover **NCPDP SCRIPT 10.6**.
 
 EdiFabric does not include communication components (AS2 or SFTP), a dashboard, or a UI. It is a library you call from your own application.
